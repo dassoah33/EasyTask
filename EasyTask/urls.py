@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from feed.views import index
 
 urlpatterns = [
+    path('', index, name='index'),  # Ajoutez le paramètre name='index' ici
     path('admin/', admin.site.urls),
 ]
